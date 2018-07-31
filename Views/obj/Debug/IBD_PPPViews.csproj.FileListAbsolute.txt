@@ -1,0 +1,2 @@
+C:\Users\Administrator\Desktop\IBD半成品看板\5.软件代码\SnCodeProject\bin\Debug\IBD_PPPViews.exe.config
+C:\Users\Administrator\Desktop\IBD半成品看板\5.软件代码\IBD_PPP\Views\bin\Debug\IBD_PPPViews.exe.config

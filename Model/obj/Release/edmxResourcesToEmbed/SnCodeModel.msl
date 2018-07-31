@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SnCode_NorthModelStoreContainer" CdmEntityContainer="SnCode_NorthEntities">
+    <EntitySetMapping Name="T_UserRole">
+      <EntityTypeMapping TypeName="SnCode_NorthModel.T_UserRole">
+        <MappingFragment StoreEntitySet="T_UserRole">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateByName" ColumnName="CreateByName" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedByName" ColumnName="ModifiedByName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Right">
+      <EntityTypeMapping TypeName="SnCode_NorthModel.T_Right">
+        <MappingFragment StoreEntitySet="T_Right">
+          <ScalarProperty Name="ModifiedByName" ColumnName="ModifiedByName" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="CreateByName" ColumnName="CreateByName" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="HasChild" ColumnName="HasChild" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="ParentRightNum" ColumnName="ParentRightNum" />
+          <ScalarProperty Name="RightName" ColumnName="RightName" />
+          <ScalarProperty Name="RightNum" ColumnName="RightNum" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="getRoleRight" FunctionName="SnCode_NorthModel.Store.getRoleRight">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SnCode_NorthModel.getRoleRight_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RightNum" ColumnName="RightNum" />
+          <ScalarProperty Name="RightName" ColumnName="RightName" />
+          <ScalarProperty Name="ParentRightNum" ColumnName="ParentRightNum" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="HasChild" ColumnName="HasChild" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateByName" ColumnName="CreateByName" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedByName" ColumnName="ModifiedByName" />
+          <ScalarProperty Name="UIChecked" ColumnName="UIChecked" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="T_RoleRight">
+      <EntityTypeMapping TypeName="SnCode_NorthModel.T_RoleRight">
+        <MappingFragment StoreEntitySet="T_RoleRight">
+          <ScalarProperty Name="CreateByName" ColumnName="CreateByName" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="RightID" ColumnName="RightID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_User">
+      <EntityTypeMapping TypeName="SnCode_NorthModel.T_User">
+        <MappingFragment StoreEntitySet="T_User">
+          <ScalarProperty Name="DeletedByName" ColumnName="DeletedByName" />
+          <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+          <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ModifiedByName" ColumnName="ModifiedByName" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="CreateByName" ColumnName="CreateByName" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Role">
+      <EntityTypeMapping TypeName="SnCode_NorthModel.T_Role">
+        <MappingFragment StoreEntitySet="T_Role">
+          <ScalarProperty Name="DeletedByName" ColumnName="DeletedByName" />
+          <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+          <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ModifiedByName" ColumnName="ModifiedByName" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="CreateByName" ColumnName="CreateByName" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Item">
+      <EntityTypeMapping TypeName="SnCode_NorthModel.T_Item">
+        <MappingFragment StoreEntitySet="T_Item">
+          <ScalarProperty Name="DeletedByName" ColumnName="DeletedByName" />
+          <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+          <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ModifiedByName" ColumnName="ModifiedByName" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="CreateByName" ColumnName="CreateByName" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="ItemState" ColumnName="ItemState" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Spec" ColumnName="Spec" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_BasicData">
+      <EntityTypeMapping TypeName="SnCode_NorthModel.T_BasicData">
+        <MappingFragment StoreEntitySet="T_BasicData">
+          <ScalarProperty Name="DeletedByName" ColumnName="DeletedByName" />
+          <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+          <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="ModifiedByName" ColumnName="ModifiedByName" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="CreateByName" ColumnName="CreateByName" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="BasicName" ColumnName="BasicName" />
+          <ScalarProperty Name="BasicCode" ColumnName="BasicCode" />
+          <ScalarProperty Name="BasicID" ColumnName="BasicID" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Material">
+      <EntityTypeMapping TypeName="SnCode_NorthModel.T_Material">
+        <MappingFragment StoreEntitySet="T_Material">
+          <ScalarProperty Name="DeletedByName" ColumnName="DeletedByName" />
+          <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+          <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreateByName" ColumnName="CreateByName" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="MaterialState" ColumnName="MaterialState" />
+          <ScalarProperty Name="SpecifiedMaterialByName" ColumnName="SpecifiedMaterialByName" />
+          <ScalarProperty Name="SpecifiedMaterialBy" ColumnName="SpecifiedMaterialBy" />
+          <ScalarProperty Name="SpecifiedMaterialDate" ColumnName="SpecifiedMaterialDate" />
+          <ScalarProperty Name="MaterialNo" ColumnName="MaterialNo" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_MaterialDeatilsScann">
+      <EntityTypeMapping TypeName="SnCode_NorthModel.T_MaterialDeatilsScann">
+        <MappingFragment StoreEntitySet="T_MaterialDeatilsScann">
+          <ScalarProperty Name="ScannByName" ColumnName="ScannByName" />
+          <ScalarProperty Name="ScannBy" ColumnName="ScannBy" />
+          <ScalarProperty Name="ScannOn" ColumnName="ScannOn" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="LinesNo" ColumnName="LinesNo" />
+          <ScalarProperty Name="MoDocNo" ColumnName="MoDocNo" />
+          <ScalarProperty Name="MaterialDetailsID" ColumnName="MaterialDetailsID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_MaterialDetails">
+      <EntityTypeMapping TypeName="SnCode_NorthModel.T_MaterialDetails">
+        <MappingFragment StoreEntitySet="T_MaterialDetails">
+          <ScalarProperty Name="MaterialByName" ColumnName="MaterialByName" />
+          <ScalarProperty Name="MaterialBy" ColumnName="MaterialBy" />
+          <ScalarProperty Name="MaterialOn" ColumnName="MaterialOn" />
+          <ScalarProperty Name="MaterialDetailsState" ColumnName="MaterialDetailsState" />
+          <ScalarProperty Name="MaterialNum" ColumnName="MaterialNum" />
+          <ScalarProperty Name="MaterialPlanNum" ColumnName="MaterialPlanNum" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Spec" ColumnName="Spec" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="MoDocNo" ColumnName="MoDocNo" />
+          <ScalarProperty Name="StorageName" ColumnName="StorageName" />
+          <ScalarProperty Name="StorageCode" ColumnName="StorageCode" />
+          <ScalarProperty Name="LinesNo" ColumnName="LinesNo" />
+          <ScalarProperty Name="PickedPlanDetailsId" ColumnName="PickedPlanDetailsId" />
+          <ScalarProperty Name="PickedPlanId" ColumnName="PickedPlanId" />
+          <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_PickedPlanDetails">
+      <EntityTypeMapping TypeName="SnCode_NorthModel.T_PickedPlanDetails">
+        <MappingFragment StoreEntitySet="T_PickedPlanDetails">
+          <ScalarProperty Name="RemainNum" ColumnName="RemainNum" />
+          <ScalarProperty Name="PickedPlanCode" ColumnName="PickedPlanCode" />
+          <ScalarProperty Name="MaterialNum" ColumnName="MaterialNum" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="PlanNum" ColumnName="PlanNum" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Spec" ColumnName="Spec" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="MoDocNo" ColumnName="MoDocNo" />
+          <ScalarProperty Name="LinesNo" ColumnName="LinesNo" />
+          <ScalarProperty Name="PickedPlanID" ColumnName="PickedPlanID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_PickedPlan">
+      <EntityTypeMapping TypeName="SnCode_NorthModel.T_PickedPlan">
+        <MappingFragment StoreEntitySet="T_PickedPlan">
+          <ScalarProperty Name="DeletedByName" ColumnName="DeletedByName" />
+          <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+          <ScalarProperty Name="DeletedOn" ColumnName="DeletedOn" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreateByName" ColumnName="CreateByName" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="PickedPlanState" ColumnName="PickedPlanState" />
+          <ScalarProperty Name="PickedPlanByName" ColumnName="PickedPlanByName" />
+          <ScalarProperty Name="PickedPlanBy" ColumnName="PickedPlanBy" />
+          <ScalarProperty Name="PickedPlanOn" ColumnName="PickedPlanOn" />
+          <ScalarProperty Name="PickedPlanCode" ColumnName="PickedPlanCode" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_CustCols">
+      <EntityTypeMapping TypeName="SnCode_NorthModel.T_CustCols">
+        <MappingFragment StoreEntitySet="T_CustCols">
+          <ScalarProperty Name="YMStr" ColumnName="YMStr" />
+          <ScalarProperty Name="CreateByName" ColumnName="CreateByName" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="CustValue" ColumnName="CustValue" />
+          <ScalarProperty Name="CustTableName" ColumnName="CustTableName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_PrintTemplates">
+      <EntityTypeMapping TypeName="SnCode_NorthModel.T_PrintTemplates">
+        <MappingFragment StoreEntitySet="T_PrintTemplates">
+          <ScalarProperty Name="ConfigCode" ColumnName="ConfigCode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_PrintTemplateDetails">
+      <EntityTypeMapping TypeName="SnCode_NorthModel.T_PrintTemplateDetails">
+        <MappingFragment StoreEntitySet="T_PrintTemplateDetails">
+          <ScalarProperty Name="PrintTemplateID" ColumnName="PrintTemplateID" />
+          <ScalarProperty Name="Suffix" ColumnName="Suffix" />
+          <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+          <ScalarProperty Name="Contents" ColumnName="Contents" />
+          <ScalarProperty Name="Params" ColumnName="Params" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Y" ColumnName="Y" />
+          <ScalarProperty Name="X" ColumnName="X" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_ItemPrintLog">
+      <EntityTypeMapping TypeName="SnCode_NorthModel.T_ItemPrintLog">
+        <MappingFragment StoreEntitySet="T_ItemPrintLog">
+          <ScalarProperty Name="CreateByName" ColumnName="CreateByName" />
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateOn" ColumnName="CreateOn" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

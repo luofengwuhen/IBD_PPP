@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SnCode_NorthModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="T_BasicData">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeID" Type="int" Nullable="false" />
+    <Property Name="TypeName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="BasicID" Type="int" />
+    <Property Name="BasicCode" Type="varchar" MaxLength="100" />
+    <Property Name="BasicName" Type="varchar" MaxLength="200" />
+    <Property Name="description" Type="varchar" MaxLength="1000" />
+    <Property Name="CreateOn" Type="datetime" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="100" />
+    <Property Name="CreateByName" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedByName" Type="varchar" MaxLength="100" />
+    <Property Name="State" Type="bit" />
+    <Property Name="DeletedOn" Type="datetime" />
+    <Property Name="DeletedBy" Type="varchar" MaxLength="100" />
+    <Property Name="DeletedByName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="T_CustCols">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustTableName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="CustValue" Type="nvarchar" MaxLength="100" />
+    <Property Name="YMStr" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreateOn" Type="datetime" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="100" />
+    <Property Name="CreateByName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="T_Item">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemCode" Type="varchar" MaxLength="50" />
+    <Property Name="ItemName" Type="varchar" MaxLength="200" />
+    <Property Name="Spec" Type="varchar" MaxLength="200" />
+    <Property Name="Unit" Type="varchar" MaxLength="50" />
+    <Property Name="ItemState" Type="int" />
+    <Property Name="CreateOn" Type="datetime" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="100" />
+    <Property Name="CreateByName" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedByName" Type="varchar" MaxLength="100" />
+    <Property Name="State" Type="bit" />
+    <Property Name="DeletedOn" Type="datetime" />
+    <Property Name="DeletedBy" Type="varchar" MaxLength="100" />
+    <Property Name="DeletedByName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="T_ItemPrintLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemID" Type="int" />
+    <Property Name="CreateOn" Type="datetime" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="100" />
+    <Property Name="CreateByName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="T_Material">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaterialNo" Type="varchar" MaxLength="100" />
+    <Property Name="SpecifiedMaterialDate" Type="date" />
+    <Property Name="SpecifiedMaterialBy" Type="varchar" MaxLength="100" />
+    <Property Name="SpecifiedMaterialByName" Type="varchar" MaxLength="100" />
+    <Property Name="MaterialState" Type="int" />
+    <Property Name="CreateOn" Type="datetime" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="100" />
+    <Property Name="CreateByName" Type="varchar" MaxLength="100" />
+    <Property Name="State" Type="bit" />
+    <Property Name="DeletedOn" Type="datetime" />
+    <Property Name="DeletedBy" Type="varchar" MaxLength="100" />
+    <Property Name="DeletedByName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="T_MaterialDeatilsScann">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaterialDetailsID" Type="int" />
+    <Property Name="MoDocNo" Type="varchar" MaxLength="200" />
+    <Property Name="LinesNo" Type="int" />
+    <Property Name="ItemCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ScannOn" Type="datetime" />
+    <Property Name="ScannBy" Type="varchar" MaxLength="100" />
+    <Property Name="ScannByName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="T_MaterialDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaterialID" Type="int" Nullable="false" />
+    <Property Name="PickedPlanId" Type="int" Nullable="false" />
+    <Property Name="PickedPlanDetailsId" Type="int" Nullable="false" />
+    <Property Name="LinesNo" Type="int" />
+    <Property Name="StorageCode" Type="varchar" MaxLength="200" />
+    <Property Name="StorageName" Type="varchar" MaxLength="200" />
+    <Property Name="MoDocNo" Type="varchar" MaxLength="200" />
+    <Property Name="ItemCode" Type="varchar" MaxLength="50" />
+    <Property Name="ItemName" Type="varchar" MaxLength="200" />
+    <Property Name="Spec" Type="varchar" MaxLength="200" />
+    <Property Name="Unit" Type="varchar" MaxLength="50" />
+    <Property Name="description" Type="varchar" MaxLength="1000" />
+    <Property Name="MaterialPlanNum" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="MaterialNum" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="MaterialDetailsState" Type="int" />
+    <Property Name="MaterialOn" Type="datetime" />
+    <Property Name="MaterialBy" Type="varchar" MaxLength="100" />
+    <Property Name="MaterialByName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="T_PickedPlan">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PickedPlanCode" Type="varchar" MaxLength="200" />
+    <Property Name="PickedPlanOn" Type="date" />
+    <Property Name="PickedPlanBy" Type="varchar" MaxLength="100" />
+    <Property Name="PickedPlanByName" Type="varchar" MaxLength="100" />
+    <Property Name="PickedPlanState" Type="int" />
+    <Property Name="CreateOn" Type="datetime" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="100" />
+    <Property Name="CreateByName" Type="varchar" MaxLength="100" />
+    <Property Name="State" Type="bit" />
+    <Property Name="DeletedOn" Type="datetime" />
+    <Property Name="DeletedBy" Type="varchar" MaxLength="100" />
+    <Property Name="DeletedByName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="T_PickedPlanDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PickedPlanID" Type="int" Nullable="false" />
+    <Property Name="PickedPlanCode" Type="varchar" MaxLength="200" />
+    <Property Name="LinesNo" Type="int" />
+    <Property Name="MoDocNo" Type="varchar" MaxLength="200" />
+    <Property Name="ItemCode" Type="varchar" MaxLength="50" />
+    <Property Name="ItemName" Type="varchar" MaxLength="200" />
+    <Property Name="Spec" Type="varchar" MaxLength="200" />
+    <Property Name="Unit" Type="varchar" MaxLength="50" />
+    <Property Name="PlanNum" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="MaterialNum" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="RemainNum" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="description" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="T_PrintTemplateDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="X" Type="int" Nullable="false" />
+    <Property Name="Y" Type="int" Nullable="false" />
+    <Property Name="Height" Type="int" Nullable="false" />
+    <Property Name="Params" Type="nvarchar" MaxLength="50" />
+    <Property Name="Contents" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Prefix" Type="nvarchar" MaxLength="50" />
+    <Property Name="Suffix" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrintTemplateID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_PrintTemplates">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConfigCode" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="T_Right">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RightNum" Type="varchar" MaxLength="100" />
+    <Property Name="RightName" Type="varchar" MaxLength="100" />
+    <Property Name="ParentRightNum" Type="varchar" MaxLength="100" />
+    <Property Name="description" Type="varchar" MaxLength="1000" />
+    <Property Name="HasChild" Type="bit" />
+    <Property Name="CreateOn" Type="datetime" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="100" />
+    <Property Name="CreateByName" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedByName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="T_Role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="varchar" MaxLength="100" />
+    <Property Name="description" Type="varchar" MaxLength="1000" />
+    <Property Name="CreateOn" Type="datetime" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="100" />
+    <Property Name="CreateByName" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedByName" Type="varchar" MaxLength="100" />
+    <Property Name="State" Type="bit" />
+    <Property Name="DeletedOn" Type="datetime" />
+    <Property Name="DeletedBy" Type="varchar" MaxLength="100" />
+    <Property Name="DeletedByName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="T_RoleRight">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleID" Type="int" />
+    <Property Name="RightID" Type="int" />
+    <Property Name="CreateOn" Type="datetime" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="100" />
+    <Property Name="CreateByName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="T_User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserCode" Type="varchar" MaxLength="50" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="PassWord" Type="varchar" MaxLength="100" />
+    <Property Name="CreateOn" Type="datetime" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="100" />
+    <Property Name="CreateByName" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedByName" Type="varchar" MaxLength="100" />
+    <Property Name="State" Type="bit" />
+    <Property Name="DeletedOn" Type="datetime" />
+    <Property Name="DeletedBy" Type="varchar" MaxLength="100" />
+    <Property Name="DeletedByName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="T_UserRole">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="RoleID" Type="int" />
+    <Property Name="CreateOn" Type="datetime" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="100" />
+    <Property Name="CreateByName" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="100" />
+    <Property Name="ModifiedByName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK_T_ItemPrintLog_T_Item">
+    <End Role="T_Item" Type="Self.T_Item" Multiplicity="0..1" />
+    <End Role="T_ItemPrintLog" Type="Self.T_ItemPrintLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Item">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="T_ItemPrintLog">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_MaterialDeatilsScann_T_MaterialDetails">
+    <End Role="T_MaterialDetails" Type="Self.T_MaterialDetails" Multiplicity="0..1" />
+    <End Role="T_MaterialDeatilsScann" Type="Self.T_MaterialDeatilsScann" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_MaterialDetails">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="T_MaterialDeatilsScann">
+        <PropertyRef Name="MaterialDetailsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_MaterialDetails_T_Material">
+    <End Role="T_Material" Type="Self.T_Material" Multiplicity="1" />
+    <End Role="T_MaterialDetails" Type="Self.T_MaterialDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Material">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="T_MaterialDetails">
+        <PropertyRef Name="MaterialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_PickedPlanDetails_T_PickedPlan">
+    <End Role="T_PickedPlan" Type="Self.T_PickedPlan" Multiplicity="1" />
+    <End Role="T_PickedPlanDetails" Type="Self.T_PickedPlanDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_PickedPlan">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="T_PickedPlanDetails">
+        <PropertyRef Name="PickedPlanID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_PrintTemplateDetails_T_PrintTemplates">
+    <End Role="T_PrintTemplates" Type="Self.T_PrintTemplates" Multiplicity="1" />
+    <End Role="T_PrintTemplateDetails" Type="Self.T_PrintTemplateDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_PrintTemplates">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="T_PrintTemplateDetails">
+        <PropertyRef Name="PrintTemplateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="getRoleRight" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="roleid" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="SnCode_NorthModelStoreContainer">
+    <EntitySet Name="T_BasicData" EntityType="Self.T_BasicData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_CustCols" EntityType="Self.T_CustCols" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Item" EntityType="Self.T_Item" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_ItemPrintLog" EntityType="Self.T_ItemPrintLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Material" EntityType="Self.T_Material" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_MaterialDeatilsScann" EntityType="Self.T_MaterialDeatilsScann" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_MaterialDetails" EntityType="Self.T_MaterialDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_PickedPlan" EntityType="Self.T_PickedPlan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_PickedPlanDetails" EntityType="Self.T_PickedPlanDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_PrintTemplateDetails" EntityType="Self.T_PrintTemplateDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_PrintTemplates" EntityType="Self.T_PrintTemplates" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Right" EntityType="Self.T_Right" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Role" EntityType="Self.T_Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_RoleRight" EntityType="Self.T_RoleRight" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_User" EntityType="Self.T_User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_UserRole" EntityType="Self.T_UserRole" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_T_ItemPrintLog_T_Item" Association="Self.FK_T_ItemPrintLog_T_Item">
+      <End Role="T_Item" EntitySet="T_Item" />
+      <End Role="T_ItemPrintLog" EntitySet="T_ItemPrintLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_MaterialDeatilsScann_T_MaterialDetails" Association="Self.FK_T_MaterialDeatilsScann_T_MaterialDetails">
+      <End Role="T_MaterialDetails" EntitySet="T_MaterialDetails" />
+      <End Role="T_MaterialDeatilsScann" EntitySet="T_MaterialDeatilsScann" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_MaterialDetails_T_Material" Association="Self.FK_T_MaterialDetails_T_Material">
+      <End Role="T_Material" EntitySet="T_Material" />
+      <End Role="T_MaterialDetails" EntitySet="T_MaterialDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_PickedPlanDetails_T_PickedPlan" Association="Self.FK_T_PickedPlanDetails_T_PickedPlan">
+      <End Role="T_PickedPlan" EntitySet="T_PickedPlan" />
+      <End Role="T_PickedPlanDetails" EntitySet="T_PickedPlanDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_PrintTemplateDetails_T_PrintTemplates" Association="Self.FK_T_PrintTemplateDetails_T_PrintTemplates">
+      <End Role="T_PrintTemplates" EntitySet="T_PrintTemplates" />
+      <End Role="T_PrintTemplateDetails" EntitySet="T_PrintTemplateDetails" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,14 @@
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeProject\bin\Debug\SnCodeProject.exe
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeProject\bin\Debug\SnCodeProject.pdb
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeProject\obj\Debug\SnCodeProject.csprojResolveAssemblyReference.cache
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeProject\obj\Debug\SnCodeProject.Form1.resources
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeProject\obj\Debug\SnCodeProject.Properties.Resources.resources
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeProject\obj\Debug\SnCodeProject.csproj.GenerateResource.Cache
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeProject\obj\Debug\SnCodeProject.exe.licenses
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeProject\obj\Debug\SnCodeProject.exe
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeProject\obj\Debug\SnCodeProject.pdb
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeProject\bin\Debug\SnCodeProject.exe.config
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeProject\obj\Debug\SnCodeProject.MainForm.resources
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeProject\obj\Debug\DXApplication1.Form2.resources
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeProject\obj\Debug\SnCodeProject.Form3.resources
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeProject\obj\Debug\UserControls.PageControl.resources

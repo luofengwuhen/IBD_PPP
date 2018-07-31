@@ -1,0 +1,21 @@
+2017-12-30 10:14:22,083 [9] ERROR SnCodeServices.BaseService - System.ApplicationException: 物料已存在!
+   在 SnCodeServices.ItemService.AddItem(T_Item tu, T_User loginUser) 位置 f:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeServices\Services\ItemService.cs:行号 61
+
+2017-12-30 10:15:23,452 [9] ERROR SnCodeServices.BaseService - System.ApplicationException: 物料已存在!
+   在 SnCodeServices.ItemService.AddItem(T_Item tu, T_User loginUser) 位置 f:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeServices\Services\ItemService.cs:行号 61
+
+2017-12-30 10:17:01,776 [9] ERROR rollingFile - System.ApplicationException: 物料已存在!
+   在 SnCodeServices.ItemService.AddItem(T_Item tu, T_User loginUser) 位置 f:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeServices\Services\ItemService.cs:行号 61
+
+2017-12-30 10:23:54,291 [10] ERROR SnCodeServices.BaseService - System.ApplicationException: 物料已存在!
+   在 SnCodeServices.ItemService.AddItem(T_Item tu, T_User loginUser)
+
+2017-12-30 10:27:23,005 [10] ERROR SnCodeServices.BaseService - System.ApplicationException: 物料已存在!
+   在 SnCodeServices.ItemService.AddItem(T_Item tu, T_User loginUser) 位置 f:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeServices\Services\ItemService.cs:行号 58
+
+2017-12-30 10:28:18,266 [10] ERROR SnCodeServices.BaseService - System.ApplicationException: 物料已存在!
+   在 SnCodeServices.ItemService.AddItem(T_Item tu, T_User loginUser) 位置 f:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeServices\Services\ItemService.cs:行号 58
+
+2017-12-30 10:29:58,391 [9] ERROR SnCodeServices.BaseService - System.ApplicationException: 物料已存在!
+   在 SnCodeServices.ItemService.AddItem(T_Item tu, T_User loginUser) 位置 f:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeServices\Services\ItemService.cs:行号 58
+

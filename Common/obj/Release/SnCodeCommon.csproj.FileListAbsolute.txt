@@ -1,0 +1,13 @@
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\bin\Release\SnCodeCommon.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\bin\Release\SnCodeCommon.pdb
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\bin\Release\Newtonsoft.Json.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\bin\Release\NPOI.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\bin\Release\NPOI.OOXML.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\bin\Release\NPOI.OpenXml4Net.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\bin\Release\NPOI.OpenXmlFormats.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\bin\Release\ICSharpCode.SharpZipLib.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\bin\Release\Newtonsoft.Json.xml
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\bin\Release\NPOI.xml
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\obj\Release\SnCodeCommon.csprojResolveAssemblyReference.cache
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\obj\Release\SnCodeCommon.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\obj\Release\SnCodeCommon.pdb

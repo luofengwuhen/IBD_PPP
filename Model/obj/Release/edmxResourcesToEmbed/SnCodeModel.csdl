@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SnCode_NorthModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="T_UserRole">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" />
+    <Property Name="RoleID" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreateByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="SnCode_NorthEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="T_UserRole" EntityType="Self.T_UserRole" />
+    <EntitySet Name="T_Right" EntityType="SnCode_NorthModel.T_Right" />
+    <FunctionImport Name="getRoleRight" ReturnType="Collection(SnCode_NorthModel.getRoleRight_Result)">
+      <Parameter Name="roleid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="T_RoleRight" EntityType="SnCode_NorthModel.T_RoleRight" />
+    <EntitySet Name="T_User" EntityType="SnCode_NorthModel.T_User" />
+    <EntitySet Name="T_Role" EntityType="SnCode_NorthModel.T_Role" />
+    <EntitySet Name="T_Item" EntityType="SnCode_NorthModel.T_Item" />
+    <EntitySet Name="T_BasicData" EntityType="SnCode_NorthModel.T_BasicData" />
+    <EntitySet Name="T_Material" EntityType="SnCode_NorthModel.T_Material" />
+    <EntitySet Name="T_MaterialDeatilsScann" EntityType="SnCode_NorthModel.T_MaterialDeatilsScann" />
+    <EntitySet Name="T_MaterialDetails" EntityType="SnCode_NorthModel.T_MaterialDetails" />
+    <AssociationSet Name="FK_T_MaterialDetails_T_Material" Association="SnCode_NorthModel.FK_T_MaterialDetails_T_Material">
+      <End Role="T_Material" EntitySet="T_Material" />
+      <End Role="T_MaterialDetails" EntitySet="T_MaterialDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_MaterialDeatilsScann_T_MaterialDetails" Association="SnCode_NorthModel.FK_T_MaterialDeatilsScann_T_MaterialDetails">
+      <End Role="T_MaterialDetails" EntitySet="T_MaterialDetails" />
+      <End Role="T_MaterialDeatilsScann" EntitySet="T_MaterialDeatilsScann" />
+    </AssociationSet>
+    <EntitySet Name="T_PickedPlanDetails" EntityType="SnCode_NorthModel.T_PickedPlanDetails" />
+    <EntitySet Name="T_PickedPlan" EntityType="SnCode_NorthModel.T_PickedPlan" />
+    <AssociationSet Name="FK_T_PickedPlanDetails_T_PickedPlan" Association="SnCode_NorthModel.FK_T_PickedPlanDetails_T_PickedPlan">
+      <End Role="T_PickedPlan" EntitySet="T_PickedPlan" />
+      <End Role="T_PickedPlanDetails" EntitySet="T_PickedPlanDetails" />
+    </AssociationSet>
+    <EntitySet Name="T_CustCols" EntityType="SnCode_NorthModel.T_CustCols" />
+    <EntitySet Name="T_PrintTemplates" EntityType="SnCode_NorthModel.T_PrintTemplates" />
+    <EntitySet Name="T_PrintTemplateDetails" EntityType="SnCode_NorthModel.T_PrintTemplateDetails" />
+    <AssociationSet Name="FK_T_PrintTemplateDetails_T_PrintTemplates" Association="SnCode_NorthModel.FK_T_PrintTemplateDetails_T_PrintTemplates">
+      <End Role="T_PrintTemplates" EntitySet="T_PrintTemplates" />
+      <End Role="T_PrintTemplateDetails" EntitySet="T_PrintTemplateDetails" />
+    </AssociationSet>
+    <EntitySet Name="T_ItemPrintLog" EntityType="SnCode_NorthModel.T_ItemPrintLog" />
+    <AssociationSet Name="FK_T_ItemPrintLog_T_Item" Association="SnCode_NorthModel.FK_T_ItemPrintLog_T_Item">
+      <End Role="T_Item" EntitySet="T_Item" />
+      <End Role="T_ItemPrintLog" EntitySet="T_ItemPrintLog" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="T_Right">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RightNum" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RightName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ParentRightNum" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="HasChild" Type="Boolean" />
+    <Property Name="CreateOn" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreateByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="getRoleRight_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="RightNum" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="RightName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ParentRightNum" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="description" Nullable="true" MaxLength="1000" />
+    <Property Type="Boolean" Name="HasChild" Nullable="true" />
+    <Property Type="DateTime" Name="CreateOn" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CreateBy" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CreateByName" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="ModifiedOn" Nullable="true" Precision="23" />
+    <Property Type="String" Name="ModifiedBy" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ModifiedByName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="UIChecked" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <EntityType Name="T_RoleRight">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleID" Type="Int32" />
+    <Property Name="RightID" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreateByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PassWord" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreateOn" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreateByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="Boolean" DefaultValue="true" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DeletedByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_Role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="CreateOn" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreateByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="Boolean" DefaultValue="true" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DeletedByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_Item">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ItemName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Spec" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ItemState" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreateByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="Boolean" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DeletedByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_BasicData">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeID" Type="Int32" Nullable="false" />
+    <Property Name="TypeName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BasicID" Type="Int32" />
+    <Property Name="BasicCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BasicName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="CreateOn" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreateByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModifiedByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="Boolean" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DeletedByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_Material">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaterialNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SpecifiedMaterialDate" Type="DateTime" Precision="0" />
+    <Property Name="SpecifiedMaterialBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SpecifiedMaterialByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MaterialState" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreateByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="Boolean" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DeletedByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="T_MaterialDeatilsScann">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaterialDetailsID" Type="Int32" />
+    <Property Name="MoDocNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="LinesNo" Type="Int32" />
+    <Property Name="ItemCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ScannOn" Type="DateTime" Precision="3" />
+    <Property Name="ScannBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ScannByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="T_MaterialDetails" Relationship="SnCode_NorthModel.FK_T_MaterialDeatilsScann_T_MaterialDetails" FromRole="T_MaterialDeatilsScann" ToRole="T_MaterialDetails" />
+  </EntityType>
+  <EntityType Name="T_MaterialDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaterialID" Type="Int32" Nullable="false" />
+    <Property Name="PickedPlanId" Type="Int32" Nullable="false" />
+    <Property Name="PickedPlanDetailsId" Type="Int32" Nullable="false" />
+    <Property Name="LinesNo" Type="Int32" />
+    <Property Name="StorageCode" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="StorageName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="MoDocNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ItemCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ItemName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Spec" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="MaterialPlanNum" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="MaterialNum" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="MaterialDetailsState" Type="Int32" />
+    <Property Name="MaterialOn" Type="DateTime" Precision="3" />
+    <Property Name="MaterialBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MaterialByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="T_Material" Relationship="SnCode_NorthModel.FK_T_MaterialDetails_T_Material" FromRole="T_MaterialDetails" ToRole="T_Material" />
+  </EntityType>
+  <Association Name="FK_T_MaterialDetails_T_Material">
+    <End Type="SnCode_NorthModel.T_Material" Role="T_Material" Multiplicity="1" />
+    <End Type="SnCode_NorthModel.T_MaterialDetails" Role="T_MaterialDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Material">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="T_MaterialDetails">
+        <PropertyRef Name="MaterialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_MaterialDeatilsScann_T_MaterialDetails">
+    <End Type="SnCode_NorthModel.T_MaterialDetails" Role="T_MaterialDetails" Multiplicity="0..1" />
+    <End Type="SnCode_NorthModel.T_MaterialDeatilsScann" Role="T_MaterialDeatilsScann" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_MaterialDetails">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="T_MaterialDeatilsScann">
+        <PropertyRef Name="MaterialDetailsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="T_PickedPlanDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PickedPlanID" Type="Int32" Nullable="false" />
+    <Property Name="LinesNo" Type="Int32" />
+    <Property Name="MoDocNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ItemCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ItemName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Spec" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PlanNum" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="description" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="MaterialNum" Type="Decimal" Precision="18" Scale="4" />
+    <NavigationProperty Name="T_PickedPlan" Relationship="SnCode_NorthModel.FK_T_PickedPlanDetails_T_PickedPlan" FromRole="T_PickedPlanDetails" ToRole="T_PickedPlan" />
+    <Property Name="PickedPlanCode" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="RemainNum" Type="Decimal" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityType Name="T_PickedPlan">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PickedPlanCode" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="PickedPlanOn" Type="DateTime" Precision="0" />
+    <Property Name="PickedPlanBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PickedPlanByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PickedPlanState" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreateByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="Boolean" />
+    <Property Name="DeletedOn" Type="DateTime" Precision="3" />
+    <Property Name="DeletedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DeletedByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_T_PickedPlanDetails_T_PickedPlan">
+    <End Type="SnCode_NorthModel.T_PickedPlan" Role="T_PickedPlan" Multiplicity="1" />
+    <End Type="SnCode_NorthModel.T_PickedPlanDetails" Role="T_PickedPlanDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_PickedPlan">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="T_PickedPlanDetails">
+        <PropertyRef Name="PickedPlanID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="T_CustCols">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustTableName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CustValue" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreateOn" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreateByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="YMStr" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="T_PrintTemplates">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConfigCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="T_PrintTemplateDetails" Relationship="SnCode_NorthModel.FK_T_PrintTemplateDetails_T_PrintTemplates" FromRole="T_PrintTemplates" ToRole="T_PrintTemplateDetails" />
+  </EntityType>
+  <EntityType Name="T_PrintTemplateDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="X" Type="Int32" Nullable="false" />
+    <Property Name="Y" Type="Int32" Nullable="false" />
+    <Property Name="Height" Type="Int32" Nullable="false" />
+    <Property Name="Params" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Contents" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Prefix" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Suffix" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PrintTemplateID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_T_PrintTemplateDetails_T_PrintTemplates">
+    <End Type="SnCode_NorthModel.T_PrintTemplates" Role="T_PrintTemplates" Multiplicity="1" />
+    <End Type="SnCode_NorthModel.T_PrintTemplateDetails" Role="T_PrintTemplateDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_PrintTemplates">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="T_PrintTemplateDetails">
+        <PropertyRef Name="PrintTemplateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="T_ItemPrintLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemID" Type="Int32" />
+    <Property Name="CreateOn" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreateByName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="T_Item" Relationship="SnCode_NorthModel.FK_T_ItemPrintLog_T_Item" FromRole="T_ItemPrintLog" ToRole="T_Item" />
+  </EntityType>
+  <Association Name="FK_T_ItemPrintLog_T_Item">
+    <End Type="SnCode_NorthModel.T_Item" Role="T_Item" Multiplicity="0..1" />
+    <End Type="SnCode_NorthModel.T_ItemPrintLog" Role="T_ItemPrintLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Item">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="T_ItemPrintLog">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

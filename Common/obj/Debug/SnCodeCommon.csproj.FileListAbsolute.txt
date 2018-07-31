@@ -1,0 +1,12 @@
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\bin\Debug\SnCodeCommon.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\bin\Debug\SnCodeCommon.pdb
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\bin\Debug\Newtonsoft.Json.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\bin\Debug\NPOI.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\bin\Debug\NPOI.OOXML.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\bin\Debug\NPOI.OpenXml4Net.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\bin\Debug\NPOI.OpenXmlFormats.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\bin\Debug\ICSharpCode.SharpZipLib.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\bin\Debug\Newtonsoft.Json.xml
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\bin\Debug\NPOI.xml
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\obj\Debug\SnCodeCommon.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeCommon\obj\Debug\SnCodeCommon.pdb

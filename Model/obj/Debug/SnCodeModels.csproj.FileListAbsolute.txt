@@ -1,0 +1,11 @@
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeModel\bin\Debug\SnCodeModels.dll.config
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeModel\bin\Debug\SnCodeModels.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeModel\bin\Debug\SnCodeModels.pdb
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeModel\bin\Debug\EntityFramework.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeModel\bin\Debug\EntityFramework.SqlServer.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeModel\bin\Debug\EntityFramework.xml
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeModel\bin\Debug\EntityFramework.SqlServer.xml
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeModel\bin\Debug\zh-Hans\EntityFramework.resources.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeModel\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeModel\obj\Debug\SnCodeModels.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeModel\obj\Debug\SnCodeModels.pdb

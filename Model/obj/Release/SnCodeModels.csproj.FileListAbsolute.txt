@@ -1,0 +1,12 @@
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeModel\bin\Release\SnCodeModels.dll.config
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeModel\bin\Release\SnCodeModels.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeModel\bin\Release\SnCodeModels.pdb
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeModel\bin\Release\EntityFramework.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeModel\bin\Release\EntityFramework.SqlServer.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeModel\bin\Release\EntityFramework.xml
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeModel\bin\Release\EntityFramework.SqlServer.xml
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeModel\bin\Release\zh-Hans\EntityFramework.resources.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeModel\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeModel\obj\Release\SnCodeModels.csprojResolveAssemblyReference.cache
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeModel\obj\Release\SnCodeModels.dll
+F:\0.喜临门\项目\北方条码扫描\SnCodeProject\SnCodeModel\obj\Release\SnCodeModels.pdb
